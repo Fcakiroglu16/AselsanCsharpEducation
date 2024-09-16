@@ -6,6 +6,17 @@ namespace AselsanCsharpEducation
     {
         static void Main(string[] args)
         {
+            var product = new Product(1, "kalem 1", 300);
+
+            Console.Write(product.Name);
+
+
+            var p1 = new Pen()
+            {
+                Brand = "x"
+            };
+
+
             Pen pen = new Pen
             {
                 Brand = "Faber Castell",
@@ -21,6 +32,17 @@ namespace AselsanCsharpEducation
             var priceWithTax = pen.CalculateKdv(100, out int taxValue);
             Console.WriteLine($"priceWithTax:{priceWithTax}");
             Console.WriteLine($"taxvalue:{taxValue}");
+
+            //3.way
+
+            var (color, brand) = pen.ReturnTuple2();
+
+            Console.WriteLine($"color:{color}");
+            Console.WriteLine($"brand:{brand}");
+
+
+            //4.way
+            var penShort = pen.ReturnObject();
 
             Console.WriteLine("-------------------------");
             Pen pen2 = new Pen

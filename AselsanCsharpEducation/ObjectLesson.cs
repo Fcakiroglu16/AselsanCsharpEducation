@@ -26,11 +26,19 @@ namespace AselsanCsharpEducation
 
         internal Pen()
         {
-            Created = DateTime.Now;
-            Height = 20;
-            Width = 30;
-            Price = 100;
+            //Created = DateTime.Now;
+            //Height = 20;
+            //Width = 30;
+            //Price = 100;
         }
+
+        //internal Pen(string color, string brand, string model)
+        //{
+        //    Color = color;
+        //    Brand = brand;
+        //    Model = model;
+        //    Created = DateTime.Now;
+        //}
 
 
         internal void Write()
@@ -59,7 +67,24 @@ namespace AselsanCsharpEducation
             return new Tuple<string, string>(Color, Brand);
         }
 
+        internal (string color, string brand) ReturnTuple2()
+        {
+            return ("red", "faber castell");
+        }
+
+
+        internal PenShort ReturnObject()
+        {
+            return new PenShort() { Brand = "faber castell", Color = "Red" };
+        }
+
         internal decimal CalculateKdv(decimal price, out int tax)
+        {
+            tax = 18;
+            return price * 1.18m;
+        }
+
+        internal decimal CalculateKdv(int price, out int tax)
         {
             tax = 18;
             return price * 1.18m;
