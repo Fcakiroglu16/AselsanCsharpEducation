@@ -27,6 +27,9 @@ namespace AselsanCsharpEducation
 
             Console.WriteLine(rowProductName, "ahmet");
 
+            Console.WriteLine("numberAsByte:" + numberAsByte);
+
+            Console.WriteLine("Merhaba Dünya");
 
             //Console.WriteLine(numberAsEmpty);
         }
