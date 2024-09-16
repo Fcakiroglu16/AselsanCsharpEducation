@@ -6,55 +6,83 @@ namespace AselsanCsharpEducation
     {
         static void Main(string[] args)
         {
-            var product = new Product(1, "kalem 1", 300);
-
-            Console.Write(product.Name);
+            var convertType = new ConvertType();
 
 
-            var p1 = new Pen()
+            var (sum, err) = convertType.Sum("5", "10");
+
+
+            if (err == "")
             {
-                Brand = "x"
-            };
-
-
-            Pen pen = new Pen
+                Console.WriteLine(sum);
+            }
+            else
             {
-                Brand = "Faber Castell",
-                Color = "Red",
-                Model = "123",
-            };
+                Console.WriteLine(err);
+            }
 
-            pen.Write();
-            //1.way
-            Console.WriteLine($"tuple 1.data :{pen.ReturnTuple().Item1}");
-            Console.WriteLine($"tuple 1.data :{pen.ReturnTuple().Item2}");
-            //2.way
-            var priceWithTax = pen.CalculateKdv(100, out int taxValue);
-            Console.WriteLine($"priceWithTax:{priceWithTax}");
-            Console.WriteLine($"taxvalue:{taxValue}");
-
-            //3.way
-
-            var (color, brand) = pen.ReturnTuple2();
-
-            Console.WriteLine($"color:{color}");
-            Console.WriteLine($"brand:{brand}");
-
-
-            //4.way
-            var penShort = pen.ReturnObject();
-
-            Console.WriteLine("-------------------------");
-            Pen pen2 = new Pen
+            try
             {
-                Brand = "Faber Castell",
-                Color = "Red",
-                Model = "123",
-                Price = 10.00m,
-                Height = 10,
-                Width = 5
-            };
-            pen2.Write();
+                var sum5 = convertType.Sum2("5", "10");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.);
+               
+            }
+         
+
+
+
+            //var product = new Product(1, "kalem 1", 300);
+
+            //Console.Write(product.Name);
+
+
+            //var p1 = new Pen()
+            //{
+            //    Brand = "x"
+            //};
+
+
+            //Pen pen = new Pen
+            //{
+            //    Brand = "Faber Castell",
+            //    Color = "Red",
+            //    Model = "123",
+            //};
+
+            //pen.Write();
+            ////1.way
+            //Console.WriteLine($"tuple 1.data :{pen.ReturnTuple().Item1}");
+            //Console.WriteLine($"tuple 1.data :{pen.ReturnTuple().Item2}");
+            ////2.way
+            //var priceWithTax = pen.CalculateKdv(100, out int taxValue);
+            //Console.WriteLine($"priceWithTax:{priceWithTax}");
+            //Console.WriteLine($"taxvalue:{taxValue}");
+
+            ////3.way
+
+            //var (color, brand) = pen.ReturnTuple2();
+
+            //Console.WriteLine($"color:{color}");
+            //Console.WriteLine($"brand:{brand}");
+
+
+            ////4.way
+            //var penShort = pen.ReturnObject();
+
+            //Console.WriteLine("-------------------------");
+            //Pen pen2 = new Pen
+            //{
+            //    Brand = "Faber Castell",
+            //    Color = "Red",
+            //    Model = "123",
+            //    Price = 10.00m,
+            //    Height = 10,
+            //    Width = 5
+            //};
+            //pen2.Write();
 
             #region value types
 
