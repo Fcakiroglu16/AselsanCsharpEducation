@@ -176,21 +176,21 @@ namespace AselsanCsharpEducation
 
         public string IfElse(int a, int b)
         {
-            //return a > b ? "a is greater than b" : "b is greater than a";
+            return a > b ? "a is greater than b" : "b is greater than a";
 
 
-            //if (a > b)
-            //    Console.WriteLine("a is greater than b");
-            //else
-            //    Console.WriteLine("b is greater than a");
-            //if (a > b)
-            //{
-            //    Console.WriteLine("a is greater than b");
-            //}
-            //else
-            //{
-            //    Console.WriteLine("b is greater than a");
-            //}
+            if (a > b)
+                Console.WriteLine("a is greater than b");
+            else
+                Console.WriteLine("b is greater than a");
+            if (a > b)
+            {
+                Console.WriteLine("a is greater than b");
+            }
+            else
+            {
+                Console.WriteLine("b is greater than a");
+            }
         }
     }
 }
