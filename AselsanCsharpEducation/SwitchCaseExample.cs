@@ -56,17 +56,28 @@ namespace AselsanCsharpEducation
 
     public class SalaryCalculate
     {
+        public decimal Calculate3(string baseSalary, Roles role)
+        {
+            if (!decimal.TryParse(baseSalary, out decimal baseSalaryAsDecimal))
+            {
+                throw new Exception("");
+            }
+
+            if (role == Roles.Admin)
+            {
+                return baseSalaryAsDecimal * .12m;
+            }
+        }
+
         public decimal Calculate2(decimal baseSalary, Roles role)
         {
-
-         
-            var totalPrice = role switch
+            return role switch
             {
                 Roles.Admin => baseSalary * 2,
                 Roles.Manager => baseSalary * 1.5m,
-                Roles.Editor => baseSalary * 1.2m
+                Roles.Editor => baseSalary * 1.2m,
+                _ => throw new NotImplementedException()
             };
-            return totalPrice;
         }
 
         public decimal Calculate(decimal baseSalary, Roles role)
@@ -84,6 +95,10 @@ namespace AselsanCsharpEducation
                     break;
                 case Roles.Editor:
                     totalSalary = baseSalary * 1.2m;
+                    break;
+
+                default:
+                    throw new NotImplementedException();
                     break;
             }
 
