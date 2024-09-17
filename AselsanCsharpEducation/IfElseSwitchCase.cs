@@ -14,36 +14,40 @@ namespace AselsanCsharpEducation
             //Guard Clauses
             if (!int.TryParse(a, out int asAsNumber))
             {
-                return new ServiceResult()
-                {
-                    IsSuccess = false,
-                    Error = "a değeri sayısal bir değer değildir"
-                };
+                return ServiceResult.Failure("a değeri sayısal bir değer değildir");
+                //return new ServiceResult()
+                //{
+                //    IsSuccess = false,
+                //    Error = "a değeri sayısal bir değer değildir"
+                //};
             }
 
             if (!int.TryParse(b, out int bAsNumber))
             {
-                return new ServiceResult()
-                {
-                    IsSuccess = false,
-                    Error = "b değeri sayısal bir değer değildir"
-                };
+                return ServiceResult.Failure("b değeri sayısal bir değer değildir");
+                //return new ServiceResult()
+                //{
+                //    IsSuccess = false,
+                //    Error = "b değeri sayısal bir değer değildir"
+                //};
             }
 
             if (asAsNumber > 10 && bAsNumber > 10)
             {
-                return new ServiceResult()
-                {
-                    IsSuccess = true,
-                    Data = asAsNumber + bAsNumber + 10
-                };
+                return ServiceResult.Success(asAsNumber + bAsNumber + 10);
+                //return new ServiceResult()
+                //{
+                //    IsSuccess = true,
+                //    Data = asAsNumber + bAsNumber + 10
+                //};
             }
 
-            return new ServiceResult()
-            {
-                IsSuccess = true,
-                Data = asAsNumber + bAsNumber
-            };
+            return ServiceResult.Success(asAsNumber + bAsNumber);
+            //return new ServiceResult()
+            //{
+            //    IsSuccess = true,
+            //    Data = asAsNumber + bAsNumber
+            //};
         }
 
         public (bool isSuccess, int data, string errorMessage) Calculate4(string a, string b)
