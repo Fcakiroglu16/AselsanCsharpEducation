@@ -67,6 +67,8 @@ namespace AselsanCsharpEducation
             {
                 return baseSalaryAsDecimal * .12m;
             }
+
+            throw new Exception();
         }
 
         public decimal Calculate2(decimal baseSalary, Roles role)

@@ -7,32 +7,49 @@ namespace AselsanCsharpEducation
     {
         static void Main(string[] args)
         {
-            var ifElseSwitchCase = new IfElseSwitchCase();
+            CollectionLesson collectionLesson = new CollectionLesson();
 
 
-            //tuple
-            var result = ifElseSwitchCase.Calculate4("2", "3");
+            collectionLesson.HashSetExample();
+            //collectionLesson.AddCollection();
 
-            if (result.isSuccess)
-            {
-                Console.WriteLine(result.data);
-            }
-            else
-            {
-                Console.WriteLine(result.errorMessage);
-            }
 
-            //service result
-            var serviceResult = ifElseSwitchCase.Calculate5("2", "3");
+            //ArrayLessons arrayLessons = new ArrayLessons();
 
-            if (serviceResult.IsSuccess)
-            {
-                Console.WriteLine(result.data);
-            }
-            else
-            {
-                Console.WriteLine(result.errorMessage);
-            }
+            //arrayLessons.AddNumbers();
+
+
+            var loop = new Loop();
+
+            //loop.ForLoop();
+            //loop.WhileLoop();
+            //loop.DoWhileLoop();
+            //var ifElseSwitchCase = new IfElseSwitchCase();
+
+
+            ////tuple
+            //var result = ifElseSwitchCase.Calculate4("2", "3");
+
+            //if (result.isSuccess)
+            //{
+            //    Console.WriteLine(result.data);
+            //}
+            //else
+            //{
+            //    Console.WriteLine(result.errorMessage);
+            //}
+
+            ////service result
+            //var serviceResult = ifElseSwitchCase.Calculate5("2", "3");
+
+            //if (serviceResult.IsSuccess)
+            //{
+            //    Console.WriteLine(result.data);
+            //}
+            //else
+            //{
+            //    Console.WriteLine(result.errorMessage);
+            //}
         }
     }
 }

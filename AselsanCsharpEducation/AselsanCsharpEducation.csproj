@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrayAndCollectionLesson.cs" />
+    <Compile Include="CollectionExample.cs" />
     <Compile Include="EnumExample.cs" />
     <Compile Include="IfElseSwitchCase.cs" />
     <Compile Include="Loop.cs" />
