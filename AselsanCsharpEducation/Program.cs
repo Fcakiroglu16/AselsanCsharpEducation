@@ -19,6 +19,7 @@ namespace AselsanCsharpEducation
             {
                 Console.WriteLine(result.errorMessage);
             }
+
             //service result
             var serviceResult = ifElseSwitchCase.Calculate5("2", "3");
 
@@ -30,7 +31,6 @@ namespace AselsanCsharpEducation
             {
                 Console.WriteLine(result.errorMessage);
             }
-
         }
     }
 }

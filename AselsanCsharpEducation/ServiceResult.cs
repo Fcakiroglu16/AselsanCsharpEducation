@@ -11,9 +11,5 @@ namespace AselsanCsharpEducation
         public string Error { get; set; } // instance property
         public int Data { get; set; }
         public bool IsSuccess { get; set; }
-
-        
-
-
     }
 }
