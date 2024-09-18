@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Abstractions\Example2\IFile.cs" />
     <Compile Include="Abstractions\Example\A.cs" />
     <Compile Include="Abstractions\Example\B.cs" />
     <Compile Include="Abstractions\Example\IB.cs" />

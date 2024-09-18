@@ -14,6 +14,7 @@ namespace AselsanCsharpEducation.Abstractions.Example
         {
             IB b = new B();
 
+
             var result = b.Add(2, 3);
         }
     }
