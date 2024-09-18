@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Numerics;
 
 namespace AselsanCsharpEducation.Abstractions
 {
-    internal class ProductRepository : IProductRepository
+    internal class ProductRepository : IGenericRepository<Product>
     {
         private static List<Product> _productList = new List<Product>(); // static member
 

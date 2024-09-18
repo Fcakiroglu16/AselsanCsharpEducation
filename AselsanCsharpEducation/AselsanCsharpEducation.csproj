@@ -45,12 +45,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abstractions\IProductRepository.cs" />
-    <Compile Include="Abstractions\Product.cs" />
-    <Compile Include="Abstractions\ProductRepository.cs" />
-    <Compile Include="Abstractions\ProductService.cs" />
+    <Compile Include="Abstractions\Example\A.cs" />
+    <Compile Include="Abstractions\Example\B.cs" />
+    <Compile Include="Abstractions\Example\IB.cs" />
+    <Compile Include="Abstractions\Repositories\IGenericRepository.cs" />
+    <Compile Include="Abstractions\Repositories\IProductRepository.cs" />
+    <Compile Include="Abstractions\Repositories\Product.cs" />
+    <Compile Include="Abstractions\Repositories\ProductRepository.cs" />
+    <Compile Include="Abstractions\Servicves\ProductService.cs" />
+    <Compile Include="Abstractions\Servicves\ServiceResult.cs" />
+    <Compile Include="Abstractions\Repositories\Stock.cs" />
+    <Compile Include="Abstractions\Repositories\StockRepository.cs" />
     <Compile Include="Encapsulation\BankAccount.cs" />
     <Compile Include="Encapsulation\EncapsulationExample.cs" />
+    <Compile Include="Generic\Person.cs" />
     <Compile Include="Inheritance\InheritanceExample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

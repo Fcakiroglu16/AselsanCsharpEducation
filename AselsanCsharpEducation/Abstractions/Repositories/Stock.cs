@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AselsanCsharpEducation.Abstractions
 {
-    internal class ProductService
+    internal class Stock
     {
     }
 }
