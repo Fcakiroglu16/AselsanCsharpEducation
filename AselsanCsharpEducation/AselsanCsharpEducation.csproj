@@ -45,20 +45,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArrayAndCollectionLesson.cs" />
-    <Compile Include="CollectionExample.cs" />
-    <Compile Include="EnumExample.cs" />
-    <Compile Include="IfElseSwitchCase.cs" />
-    <Compile Include="Loop.cs" />
-    <Compile Include="Product.cs" />
+    <Compile Include="Abstractions\IProductRepository.cs" />
+    <Compile Include="Abstractions\Product.cs" />
+    <Compile Include="Abstractions\ProductRepository.cs" />
+    <Compile Include="Abstractions\ProductService.cs" />
+    <Compile Include="Encapsulation\BankAccount.cs" />
+    <Compile Include="Encapsulation\EncapsulationExample.cs" />
+    <Compile Include="Inheritance\InheritanceExample.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ServiceResult.cs" />
-    <Compile Include="StaticProperty.cs" />
-    <Compile Include="SwitchCaseExample.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
