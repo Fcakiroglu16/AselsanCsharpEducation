@@ -1,50 +1,63 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Threading;
 using AselsanCsharpEducation.Delegates;
+using AselsanCsharpEducation.Events;
 
 namespace AselsanCsharpEducation
 {
     internal class Program
     {
-        static bool IsProduct(Product p)
+        static void SendSms(int stockCount, string phone)
         {
-            return p.Price > 500;
-        }
-
-        static bool IsProduct2(Product p)
-        {
-            return p.Id == 2;
+            Console.WriteLine($"Sms gönderildi phone:{phone} count:{stockCount}");
         }
 
         static void Main(string[] args)
         {
-            var productRepository = new ProductRepository();
+            var stock = new Stock();
 
-            productRepository.Where(IsProduct);
-            productRepository.FirstOrDefault(IsProduct2);
-            productRepository.FirstOrDefault(p => p.Id == 2);
+            stock.StockChangedEvent += (eventArgs) =>
+            {
+                Console.WriteLine($" barcode :{eventArgs.Barcode}");
 
-
-            var calculate = new Calculate();
-
-            //var salary = calculate.CalculateSalary(1000, 200, 2, SalaryType.Employee);
-
-            var buttonIndex = 2;
-
-            Dictionary<int, CalculateSalaryDelegate> calculateSalaryDelegateDictionary =
-                new Dictionary<int, CalculateSalaryDelegate>
-                {
-                    { 0, calculate.ManagerCalculate },
-                    { 1, calculate.EditorCalculate },
-                    { 2, calculate.EmployeeCalculate }
-                };
+                Console.WriteLine($" count :{eventArgs.Count}");
+            };
 
 
-            Console.WriteLine(calculateSalaryDelegateDictionary[buttonIndex](1000, 10, 2));
+            for (int i = 1; i < 20; i++)
+            {
+                stock.StockCount = i;
+            }
 
 
-            var salary2 = calculate.CalculateSalaryGood(1000, 200, 2, calculate.ManagerCalculate);
-            var salary3 = calculate.CalculateSalaryGood(1000, 200, 2, CustomCalculate);
+            //var productRepository = new ProductRepository();
+
+            //productRepository.Where(IsProduct);
+            //productRepository.FirstOrDefault(IsProduct2);
+            //productRepository.FirstOrDefault(p => p.Id == 2);
+
+
+            //var calculate = new Calculate();
+
+            ////var salary = calculate.CalculateSalary(1000, 200, 2, SalaryType.Employee);
+
+            //var buttonIndex = 2;
+
+            //Dictionary<int, CalculateSalaryDelegate> calculateSalaryDelegateDictionary =
+            //    new Dictionary<int, CalculateSalaryDelegate>
+            //    {
+            //        { 0, calculate.ManagerCalculate },
+            //        { 1, calculate.EditorCalculate },
+            //        { 2, calculate.EmployeeCalculate }
+            //    };
+
+
+            //Console.WriteLine(calculateSalaryDelegateDictionary[buttonIndex](1000, 10, 2));
+
+
+            //var salary2 = calculate.CalculateSalaryGood(1000, 200, 2, calculate.ManagerCalculate);
+            //var salary3 = calculate.CalculateSalaryGood(1000, 200, 2, CustomCalculate);
 
             //Console.WriteLine($"Maaş:{salary}");
 
@@ -85,9 +98,20 @@ namespace AselsanCsharpEducation
             //}
         }
 
+
         static decimal CustomCalculate(decimal baseSalary, decimal bonus, int childCount)
         {
             return baseSalary * bonus * childCount * 20;
+        }
+
+        static bool IsProduct(Product p)
+        {
+            return p.Price > 500;
+        }
+
+        static bool IsProduct2(Product p)
+        {
+            return p.Id == 2;
         }
     }
 }

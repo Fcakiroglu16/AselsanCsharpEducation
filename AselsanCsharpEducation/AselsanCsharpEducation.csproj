@@ -51,6 +51,7 @@
     <Compile Include="Delegates\DelegateExample.cs" />
     <Compile Include="Delegates\DelegateExample2.cs" />
     <Compile Include="Delegates\ProductRepository.cs" />
+    <Compile Include="Events\EventExample.cs" />
     <Compile Include="ExtensionMethod\Car.cs" />
     <Compile Include="ExtensionMethod\ExtensionMethod.cs" />
     <Compile Include="ExtensionMethod\Helper.cs" />

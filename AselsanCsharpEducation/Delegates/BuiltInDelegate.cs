@@ -12,23 +12,45 @@ namespace AselsanCsharpEducation.Delegates
     {
         void Example()
         {
-            Action<int, int> action = new Action<int, int>(ActionMethod);
+            #region action
 
-            action.Invoke(2, 5);
-            action(2, 5);
-            // Action    void ( parameters)
+            //Action
+            //Action<int, int> action = new Action<int, int>(ActionMethod);
+            Action<int, int> action = (a, b) => { Console.WriteLine(a + b); };
+
+            action(2, 3);
+            action.Invoke(2, 3);
+
+            #endregion
+
+            #region predicate
+
             //Predicate
-            // Function
+            Predicate<int> predicate = (a) => a > 5;
+
+            predicate(2);
+            predicate(10);
+
+            #endregion
+
+            #region func
+
+            //function
+
+            Func<int, int, string> func = (x, y) => (x + y).ToString();
+            Func<DateTime, int, DateTime> dateFunc = (date, number) => date.AddDays(number);
+
+            //Func<int, int, string> func = (x, y) =>
+            //{
+            //    return (x + y).ToString();
+            //};
+
+            #endregion
         }
 
         public void ActionMethod(int a, int b)
         {
             Console.WriteLine($"{a} {b}");
-        }
-
-        public void Calculate(int a, int b, Action<int, int> action)
-        {
-            action.Invoke(a, b);
         }
     }
 }
