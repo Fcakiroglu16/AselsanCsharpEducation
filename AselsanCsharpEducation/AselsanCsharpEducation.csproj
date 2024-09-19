@@ -47,8 +47,10 @@
   <ItemGroup>
     <Compile Include="Abstractions\Abstraction\AbstractionExample.cs" />
     <Compile Include="Abstractions\Abstraction\Animal.cs" />
+    <Compile Include="Delegates\BuiltInDelegate.cs" />
     <Compile Include="Delegates\DelegateExample.cs" />
     <Compile Include="Delegates\DelegateExample2.cs" />
+    <Compile Include="Delegates\ProductRepository.cs" />
     <Compile Include="ExtensionMethod\Car.cs" />
     <Compile Include="ExtensionMethod\ExtensionMethod.cs" />
     <Compile Include="ExtensionMethod\Helper.cs" />

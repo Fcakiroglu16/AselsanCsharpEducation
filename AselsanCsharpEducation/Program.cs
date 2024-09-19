@@ -6,8 +6,25 @@ namespace AselsanCsharpEducation
 {
     internal class Program
     {
+        static bool IsProduct(Product p)
+        {
+            return p.Price > 500;
+        }
+
+        static bool IsProduct2(Product p)
+        {
+            return p.Id == 2;
+        }
+
         static void Main(string[] args)
         {
+            var productRepository = new ProductRepository();
+
+            productRepository.Where(IsProduct);
+            productRepository.FirstOrDefault(IsProduct2);
+            productRepository.FirstOrDefault(p => p.Id == 2);
+
+
             var calculate = new Calculate();
 
             //var salary = calculate.CalculateSalary(1000, 200, 2, SalaryType.Employee);
@@ -26,8 +43,8 @@ namespace AselsanCsharpEducation
             Console.WriteLine(calculateSalaryDelegateDictionary[buttonIndex](1000, 10, 2));
 
 
-            //var salary2 = calculate.CalculateSalaryGood(1000, 200, 2, calculateSalaryDelegate);
-
+            var salary2 = calculate.CalculateSalaryGood(1000, 200, 2, calculate.ManagerCalculate);
+            var salary3 = calculate.CalculateSalaryGood(1000, 200, 2, CustomCalculate);
 
             //Console.WriteLine($"Maaş:{salary}");
 
