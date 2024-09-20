@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Threading;
 using AselsanCsharpEducation.Delegates;
 using AselsanCsharpEducation.Events;
+using AselsanCsharpEducation.Exceptions;
 
 namespace AselsanCsharpEducation
 {
@@ -15,20 +16,25 @@ namespace AselsanCsharpEducation
 
         static void Main(string[] args)
         {
-            var stock = new Stock();
+            var exceptionExample = new CalculateExceptionLesson();
 
-            stock.StockChangedEvent += (eventArgs) =>
-            {
-                Console.WriteLine($" barcode :{eventArgs.Barcode}");
-
-                Console.WriteLine($" count :{eventArgs.Count}");
-            };
+            Console.WriteLine(exceptionExample.Add("2a", "4"));
 
 
-            for (int i = 1; i < 20; i++)
-            {
-                stock.StockCount = i;
-            }
+            //var stock = new Stock();
+
+            //stock.StockChangedEvent += (eventArgs) =>
+            //{
+            //    Console.WriteLine($" barcode :{eventArgs.Barcode}");
+
+            //    Console.WriteLine($" count :{eventArgs.Count}");
+            //};
+
+
+            //for (int i = 1; i < 20; i++)
+            //{
+            //    stock.StockCount = i;
+            //}
 
 
             //var productRepository = new ProductRepository();
