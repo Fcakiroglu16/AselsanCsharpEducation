@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35303.130
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AselsanCsharpEducation", "AselsanCsharpEducation\AselsanCsharpEducation.csproj", "{9C8A21F1-7D0E-4482-9B86-9B1DAFD73445}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoggingExample", "LoggingExample\LoggingExample.csproj", "{A05FF155-7426-4954-9F24-B3A6DC4923C0}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LibraryExample", "LibraryExample", "{812DB56F-352A-4912-A798-4E3F4F8FF522}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{F58568F8-B30D-47A5-9287-C38C069BB12D}"
@@ -21,14 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9C8A21F1-7D0E-4482-9B86-9B1DAFD73445}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C8A21F1-7D0E-4482-9B86-9B1DAFD73445}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C8A21F1-7D0E-4482-9B86-9B1DAFD73445}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C8A21F1-7D0E-4482-9B86-9B1DAFD73445}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A05FF155-7426-4954-9F24-B3A6DC4923C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A05FF155-7426-4954-9F24-B3A6DC4923C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A05FF155-7426-4954-9F24-B3A6DC4923C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A05FF155-7426-4954-9F24-B3A6DC4923C0}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F58568F8-B30D-47A5-9287-C38C069BB12D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F58568F8-B30D-47A5-9287-C38C069BB12D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F58568F8-B30D-47A5-9287-C38C069BB12D}.Release|Any CPU.ActiveCfg = Release|Any CPU
